@@ -19,7 +19,7 @@
 
 #include <stdint.h>
 
-#if HAVE_ANDROID_OS
+#ifdef __ANDROID__
 #include <binder/IBinder.h>
 #endif
 
@@ -129,7 +129,7 @@ public:
     void tryRemapKey(int32_t scanCode, int32_t metaState,
             int32_t* outKeyCode, int32_t* outMetaState) const;
 
-#if HAVE_ANDROID_OS
+#ifdef __ANDROID__
     /* Reads a key map from a parcel. */
     static sp<KeyCharacterMap> readFromParcel(Parcel* parcel);
 
