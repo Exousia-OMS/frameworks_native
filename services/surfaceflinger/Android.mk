@@ -121,6 +121,7 @@ LOCAL_CLANG := true
 LOCAL_LDFLAGS := -Wl,--version-script,art/sigchainlib/version-script.txt -Wl,--export-dynamic
 LOCAL_CFLAGS := -DLOG_TAG=\"SurfaceFlinger\"
 LOCAL_CPPFLAGS := -std=c++11
+LOCAL_INIT_RC := surfaceflinger.rc
 
 ifneq ($(ENABLE_CPUSETS),)
     LOCAL_CFLAGS += -DENABLE_CPUSETS
